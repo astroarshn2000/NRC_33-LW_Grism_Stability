@@ -32,19 +32,31 @@ In order to commission this observing mode, the following observations, defined 
 These exposures, which collect data from 3 detectors, will generate a total of 30.3GB of science data. The time-series template uses unique and very specific field points and allows the use of subarrays. Observations are only supported on Module A, and only for the GRISMR element. Photometric repeatability is critical for this science case, so a long exposure is needed to assess the stability on hours-long timescales.
 
 **ACTIVITY EXECUTION METHOD:** OPE commanding and standard APT templates. 
+
 **CRITICAL START WINDOW?** Yes (there is a phase constraint for the binary star eclipse)
+
 **IF YES, NO-LATER-THAN START TIME:** No
+
 **REAL-TIME CONTACT REQUIRED?** No
+
 **DURATION:** (APT 27.1, includes initial slew) **Grism time-series: 4.84 hours.** ***After analysis of all the data from this activity (estimated to require 4 days), NIRCam grism time-series can be considered enabled.***
+
 **DATA REQUIREMENTS:** (APT 27.1 estimate) **Grism time-series: 30.3 GB**
+
 **IS YOUR INSTRUMENT DRIVING TELESCOPE POINTING?** Yes
+
 **IS THIS ACTIVITY PREFERABLY DONE IN PARALLEL?** No
 
 ***ANALYSIS AND EXPECTED RESULTS:***
+
 As noted above, this data will be used to assess the time series stability. 
+
 **Weak Lens and Grism Time Series Extraction:**
+
 The short wavelength weak lens data will be extracted with aperture photometry and Gaussian centroiding on the central peak. The centroiding will be used to determine pointing jitter and if it has any effect on photometry or the grism. The spectrum will be extracted with optimal estimation and broken into individual wavelength time series.
+
 **Analysis:**
+
 The time series will be fit with transitlight curves and the residuals will be assessed for photometric stability. The centroids from the weak lens will be correlated against any flux changes. A final estimate ofthe residuals will be calculated for each wavelength. Expected precision is 51 ppm per spectral wavechannel at a spectral resolution of R=100.
 
 ***AUTHORS:***
