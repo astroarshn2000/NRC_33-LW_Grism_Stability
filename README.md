@@ -1,5 +1,7 @@
 # CAR_NIRCAM-033: LW GRISM Stability
 
+<img src="images/jwst_logo.png"> <img src="images/nircam_logo.png" height="330" width="450"/>
+
 ## Description
 
 ***GOALS:***
