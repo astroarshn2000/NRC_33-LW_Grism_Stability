@@ -27,7 +27,7 @@ A backup eclipsing binary that has complementary visibility is HD 5687/TIC 51912
 
 In order to commission this observing mode, the following observations, defined using the grism time-series template of one of the targets above should be collected:
 * **LW Channel: GRISMR + F322W2, SUBGRISM256, NOUTPUTS=4**
-* **SW Channel: WLP8+F210M, SUBGRISM256, NOUTPUTS=4**
+* **SW Channel: WLP8 + F210M, SUBGRISM256, NOUTPUTS=4**
 
 These exposures, which collect data from 3 detectors, will generate a total of 30.3GB of science data. The time-series template uses unique and very specific field points and allows the use of subarrays. Observations are only supported on Module A, and only for the GRISMR element. Photometric repeatability is critical for this science case, so a long exposure is needed to assess the stability on hours-long timescales.
 
