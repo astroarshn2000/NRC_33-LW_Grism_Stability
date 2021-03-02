@@ -97,7 +97,7 @@ params.t_secondary = 0                # central eclipse time
 params.limb_dark = "quadratic"        # limb darkening model
 params.u = [0.038056000, 0.25594800]  # limb darkening coefficients (ExoFAST)
 nint = 1336
-times = np.linspace(2458651.300, 2458651.930, nint)
+times = np.linspace(2458651.600, 2458651.980, nint)
 m = batman.TransitModel(params, times)
 flux = m.light_curve(params)
 lightcurve_file = os.path.join(output_dir, 'GJ436_lightcurve.hdf5')
@@ -172,15 +172,19 @@ yam.use_linearized_darks = True
 yam.create_inputs()
 
 # ---------- SIMULATE F322W2 GRISMR TSO ---------- 
-gr_tso_yaml_file = os.path.join(output_yaml_dir, 'jw00042001001_01101_00002_nrca5.yaml')
+
+gr_tso_yaml_file = os.path.join(output_yaml_dir, 'jw01442001001_01101_00002_nrca5.yaml')
 gr_f322w2 = GrismTSO(gr_tso_yaml_file, SED_file=sed_file, SED_normalizing_catalog_column=None,
                     final_SED_file=None, save_dispersed_seed=True, source_stamps_file=None,
                     extrapolate_SED=True, override_dark=None, disp_seed_filename=None,
                     orders=["+1", "+2"])
 gr_f322w2.create()
 
-# SIMULATE WLP4+F210M IMAGING TSO
-img_tso_sw_yaml = os.path.join(output_yaml_dir, 'jw00042001001_01101_00001_nrca1.yaml')
-img_tso = ImgSim()
-img_tso.paramfile = img_tso_sw_yaml
-img_tso.create()
+# ---------- SIMULATE WLP4+F210M IMAGING TSO ---------- 
+
+img_tso_sw_A1_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca1.yaml')
+img_tso_sw_A3_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca3.yaml')
+img_tso_A1 = ImgSim(paramfile=img_tso_sw_A1_yaml)
+img_tso_A1.create()
+img_tso_A3 = ImgSim(paramfile=img_tso_sw_A3_yaml)
+img_tso_A3.create()
