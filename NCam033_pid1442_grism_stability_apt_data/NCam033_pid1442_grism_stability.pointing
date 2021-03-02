@@ -1,15 +1,15 @@
 # APT Output Product
 # 
-# APT Version: Version 2020.3  
-# Date: Tue Mar 02 22:39:19 GMT 2021
+# APT Version: Version 2020.5  
+# Date: Tue Mar 02 22:49:27 GMT 2021
 
 JWST Pointing Report for JWST Approved Proposal 1442 (NCam033_pid1442_grism_stability.aptx)
 
 ========================================
-* CAR_NIRCam-33: Time Series Stability Verification (Obs 1)
+* CAR_NIRCam-33 (Obs 1)
 ** Visit 1:1
 Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
-  0    0   0    0 NRCA5_TAGRISMTS32         1 HD-14098 +235.87684  +59.11375   +0.000   +0.000   +0.000   +0.000  +73.262 -551.572   +0.000   +0.000 TARGET     T_ACQ          0      0  0.000 (base)
-  1    1   1    1 NRCA5_GRISM256_F322W2     1 HD-14098 +235.87684  +59.11375   +0.000   +1.449   +0.000   +0.000  +50.773 -555.028   +0.000   +1.449 TARGET     SCIENCE        0      0 22.752          
+  0    0   0    0 NRCA5_TAGRISMTS32         1 HD-14098 +235.87684  +59.11375   +0.000   +0.000   +0.000   +0.000  +73.230 -551.540   +0.000   +0.000 TARGET     T_ACQ          0      0  0.000 (base)
+  1    1   1    1 NRCA5_GRISM256_F322W2     1 HD-14098 +235.87684  +59.11375   +0.000   +1.449   +0.000   +0.000  +50.773 -555.028   +0.000   +1.449 TARGET     SCIENCE        0      0 22.726          
 
 
