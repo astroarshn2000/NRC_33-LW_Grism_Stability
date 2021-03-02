@@ -165,7 +165,7 @@ pav3 = 0
 yam = yaml_generator.SimInput(xml_file, pointing_file, catalogs=catalogs, verbose=True,
                               output_dir=output_yaml_dir, simdata_output_dir=output_data_dir,
                               background=background, roll_angle=pav3,
-                              dates='2021-11-10', datatype='linear, raw', dateobs_for_background=True,
+                              dates='2022-3-1', datatype='linear, raw', dateobs_for_background=True,
                               reffile_defaults='crds')
 
 yam.use_linearized_darks = True
