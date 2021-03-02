@@ -85,10 +85,10 @@ with h5py.File(sed_file, "w") as file_obj:
 # ----------  BATMAN Parameters and Light-Curve File  ----------
 
 params = batman.TransitParams()       # object to store transit parameters
-params.t0 = 2458651.785               # epoch of transit center
+params.t0 = 2458651.789013            # epoch of eclipse center
 params.per = 1.2696257                # orbital period
-params.rp = 0.0927                    # planet radius (in units of stellar radii)
-params.a = 3.153                      # semi-major axis (in units of stellar radii)
+params.rp = 0.12845                   # planet/EB radius (in units of stellar radii)
+params.a = 6.5                        # semi-major axis (in units of stellar radii)
 params.inc = 90                       # orbital inclination (in degrees)
 params.ecc = 0                        # eccentricity
 params.w = 90                         # longitude of periastron (in degrees)
@@ -97,10 +97,10 @@ params.t_secondary = 0                # central eclipse time
 params.limb_dark = "quadratic"        # limb darkening model
 params.u = [0.038056000, 0.25594800]  # limb darkening coefficients (ExoFAST)
 nint = 1336
-times = np.linspace(2458651.600, 2458651.980, nint)
+times = np.linspace(2458651.688213, 2458651.8898130003, nint) # Total = 4.84 hrs. So, 2.42 hrs = 0.1008 days on either side of t0
 m = batman.TransitModel(params, times)
 flux = m.light_curve(params)
-lightcurve_file = os.path.join(output_dir, 'GJ436_lightcurve.hdf5')
+lightcurve_file = os.path.join(output_dir, 'HD-140982_lightcurve.hdf5')
 contents = {}
 contents['1'] = {'times': times,
                  'fluxes': flux}
@@ -110,13 +110,13 @@ save_tso(contents, lightcurve_file, time_unit='days')
 
 f, a = plt.subplots()
 a.plot(times, flux, ls='None', marker='.', ms=0.5, zorder=1, color='black')
-a.set_xlabel('Time (Days)')
+a.set_xlabel('Time (BJD)')
 a.set_ylabel('Normalized Flux')
 a.set_title('HD-140982 Eclipse', fontsize='large', fontweight='bold')
 a.xaxis.set_minor_locator(AutoMinorLocator()) 
 a.yaxis.set_minor_locator(AutoMinorLocator())
 a.tick_params(which='minor', length=2.5, color='k')
-plt.savefig('HD-140982_LC_BATMAN.png')
+plt.savefig('HD-140982_LC.png')
 plt.show()
 
 
@@ -165,7 +165,7 @@ pav3 = 0
 yam = yaml_generator.SimInput(xml_file, pointing_file, catalogs=catalogs, verbose=True,
                               output_dir=output_yaml_dir, simdata_output_dir=output_data_dir,
                               background=background, roll_angle=pav3,
-                              dates='2022-11-10', datatype='linear, raw', dateobs_for_background=True,
+                              dates='2021-11-10', datatype='linear, raw', dateobs_for_background=True,
                               reffile_defaults='crds')
 
 yam.use_linearized_darks = True
