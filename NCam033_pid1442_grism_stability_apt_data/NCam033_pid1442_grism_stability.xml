@@ -216,7 +216,7 @@ Everett Schlawin, Thomas Beatty, Thomas Greene, John Stansberry, Martha Boyer an
             <Observation AutoTarget="false">
                 <Number>1</Number>
                 <TargetID>1 HD-140982</TargetID>
-                <Label>CAR NIRCam-33: Time Series Stability Verification</Label>
+                <Label>CAR_NIRCam-33: Time Series Stability Verification</Label>
                 <Instrument>NIRCAM</Instrument>
                 <Template>
                     <ncgts:NircamGrismTimeSeries>
