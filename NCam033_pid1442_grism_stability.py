@@ -149,7 +149,7 @@ object_f210m_mag = 7.600444438235966
 imaging_tso_catalog = os.path.join(output_dir, 'tso_imaging_source.cat')
 tsimg_cat = ImagingTSOCatalog(ra=[object_ra], dec=[object_dec], lightcurve_file=[lightcurve_file])
 tsimg_cat.add_magnitude_column([object_f210m_mag], magnitude_system='vegamag',
-                               instrument='nircam', filter_name='wlp8')
+                               instrument='nircam', filter_name='F210M/WLP8')
 tsimg_cat.save(imaging_tso_catalog)
 
 
