@@ -149,7 +149,7 @@ object_f210m_mag = 7.600444438235966
 imaging_tso_catalog = os.path.join(output_dir, 'tso_imaging_source.cat')
 tsimg_cat = ImagingTSOCatalog(ra=[object_ra], dec=[object_dec], lightcurve_file=[lightcurve_file])
 tsimg_cat.add_magnitude_column([object_f210m_mag], magnitude_system='vegamag',
-                               instrument='nircam', filter_name='wlp4')
+                               instrument='nircam', filter_name='wlp8')
 tsimg_cat.save(imaging_tso_catalog)
 
 
@@ -180,7 +180,7 @@ gr_f322w2 = GrismTSO(gr_tso_yaml_file, SED_file=sed_file, SED_normalizing_catalo
                     orders=["+1", "+2"])
 gr_f322w2.create()
 
-# ---------- SIMULATE WLP4+F210M IMAGING TSO ---------- 
+# ---------- SIMULATE WLP8+F210M IMAGING TSO ---------- 
 
 img_tso_sw_A1_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca1.yaml')
 img_tso_sw_A3_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca3.yaml')
