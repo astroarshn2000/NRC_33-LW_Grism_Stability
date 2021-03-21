@@ -1,5 +1,5 @@
-""" NIRCam CAR-3: TS Stability (HD 140982 - GRISMR) Simulation
-             ~ Arsh R. Nadkarni (UArizona), 2021 """  
+""" NIRCam CAR-33: TS Stability (HD 140982) Simulations
+         ~ Arsh R. Nadkarni (UArizona), 2021 """  
 
 # ----------   Set Environment Variables   ----------
 
@@ -122,8 +122,12 @@ plt.show()
 
 # ----------  Transmission Spectrum  ----------
 
-tran_spec_file = os.path.join(tsdir,'HD140982_tran_spec.txt')
-
+in_file = os.path.join(tsdir,'HD140982_tran_spec.txt')
+tran_spec_file = in_file.replace('HD140982_tran_spec.txt', 'HD140982_tran_spec_rp_over_rs.txt')
+tab = ascii.read(in_file)
+new_trans = np.sqrt(tab['Transmission'])
+tab['Transmission'] = new_trans
+ascii.write(tab, tran_spec_file, overwrite=True)
 
 # ---------- Create Grism TSO Catalog   ----------
 
