@@ -1,0 +1,128 @@
+Inst:
+  instrument: NIRCAM
+  mode: wfss
+  use_JWST_pipeline: true
+Output:
+  PI_Name: Everett Schlawin
+  Proposal_category: GO
+  Science_category: Planets and Planet Formation
+  activity_id: '01'
+  datatype: linear, raw
+  date_obs: '2022-03-01'
+  directory: /home/anadkarni/NRC_33-LW_Grism_Stability/NCam033_pid1442_grism_stability_sim_data
+  dmsOrient: true
+  exposure_number: '00002'
+  file: /home/anadkarni/NRC_33-LW_Grism_Stability/jw01442001001_01101_00002_nrca5_uncal_background_sources.fits
+  format: DMS
+  grism_source_image: true
+  obs_id: V01442001001P0000000001101
+  observation_label: CAR_NIRCam-33
+  observation_number: '001'
+  primary_dither_position: 1
+  primary_dither_type: None
+  program_number: 802
+  save_intermediates: false
+  sequence_id: '1'
+  subpix_dither_position: 1
+  subpix_dither_type: None
+  target_dec: 59.11374722222222
+  target_name: HD-140982
+  target_ra: 235.87683666666666
+  time_obs: '20:45:45.483'
+  title: Time Series Stability Verification
+  total_primary_dither_positions: 1
+  total_subpix_dither_positions: 1
+  unsigned: true
+  visit_group: '01'
+  visit_id: '01442001001'
+  visit_number: '001'
+  xoffset: 0.0
+  yoffset: 1.449
+Readout:
+  array_name: NRCA5_GRISM256_F322W2
+  filter: F322W2
+  namp: 4
+  nframe: 1
+  ngroup: 7
+  nint: 1336
+  nskip: 0
+  pupil: GRISMR
+  readpatt: RAPID
+  resets_bet_ints: 1
+Reffiles:
+  astrometric: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_distortion_0090.asdf
+  badpixmask: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_mask_0038.fits
+  crosstalk: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/xtalk20150303g0.errorcut.txt
+  dark: None
+  filter_throughput: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/placeholder.txt
+  filter_wheel_positions: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/nircam_filter_and_pupil_wheel_positions.txt
+  filtpupilcombo: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/nircam_filter_pupil_pairings.list
+  flux_cal: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/NIRCam_zeropoints.list
+  gain: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_gain_0056.fits
+  illumflat: None
+  invertIPC: false
+  ipc: /home/anadkarni/crds_cache/references/jwst/nircam/Kernel_to_add_IPC_effects_from_jwst_nircam_ipc_0028.fits
+  linearity: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_linearity_0052.fits
+  linearized_darkfile: /home/anadkarni/JWST_Programs/mirage_reference_files/mirage_data/nircam/darks/linearized/A5/NRCNRCALONG-DARK-60201458561_1_485_SE_2016-01-20T15h29m07_uncal_seg001_linear_dark_prep_object.fits
+  occult: None
+  photom: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_photom_0092.fits
+  pixelAreaMap: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_area_0015.fits
+  pixelflat: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_flat_0142.fits
+  readpattdefs: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/nircam_read_pattern_definitions.list
+  saturation: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_saturation_0063.fits
+  subarray_defs: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/NIRCam_subarray_definitions.list
+  superbias: /home/anadkarni/crds_cache/references/jwst/nircam/jwst_nircam_superbias_0022.fits
+Telescope:
+  dec: 59.11375
+  ra: 235.87684
+  rotation: 0
+  tracking: sidereal
+cosmicRay:
+  library: SUNMAX
+  path: /home/anadkarni/JWST_Programs/mirage_reference_files/mirage_data/nircam/cosmic_ray_library
+  scale: 1.0
+  seed: 4110842081
+  suffix: IPC_NIRCam_A5
+newRamp:
+  dq_configfile: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/dq_init.cfg
+  linear_configfile: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/linearity.cfg
+  refpix_configfile: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/refpix.cfg
+  sat_configfile: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/saturation.cfg
+  superbias_configfile: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/superbias.cfg
+nonlin:
+  accuracy: 1.0e-06
+  limit: 60000.0
+  maxiter: 10
+  robberto: false
+simSignals:
+  PSFConvolveExtended: true
+  add_psf_wings: true
+  bkgdrate: medium
+  expand_catalog_for_segments: false
+  extended: None
+  extendedCenter: 1024,1024
+  extendedscale: 1.0
+  galaxyListFile: None
+  gridded_psf_library_row_padding: 4
+  movingTargetConvolveExtended: true
+  movingTargetExtended: None
+  movingTargetList: None
+  movingTargetSersic: None
+  movingTargetToTrack: None
+  photonyield: true
+  pointsource: dummy_ptsrc.cat
+  poissonseed: 1192937097
+  psf_wing_threshold_file: /home/anadkarni/anaconda3/envs/astro/lib/python3.6/site-packages/mirage/config/nircam_psf_wing_rate_thresholds.txt
+  psfpath: /home/anadkarni/JWST_Programs/mirage_reference_files/mirage_data/nircam/gridded_psf_library
+  psfwfe: predicted
+  psfwfegroup: 0
+  pymethod: true
+  scattered: None
+  scatteredscale: 1.0
+  signal_low_limit_for_segmap: 0.031
+  signal_low_limit_for_segmap_units: ADU/sec
+  tso_grism_catalog: None
+  tso_imaging_catalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_imaging_source.cat
+  use_dateobs_for_background: true
+  zodiacal: None
+  zodiscale: 1.0

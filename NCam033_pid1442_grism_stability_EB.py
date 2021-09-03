@@ -9,7 +9,7 @@ os.environ["CRDS_PATH"] = os.path.expandvars("$HOME/crds_cache")
 os.environ["CRDS_SERVER_URL"] = "https://jwst-crds.stsci.edu"
 os.environ["PYSYN_CDBS"] = "/home/anadkarni/JWST_Programs/stsynphot_reference_files/grp/hst/cdbs/"
 os.environ["WEBBPSF_PATH"] = "/home/anadkarni/JWST_Programs/webbpsf_reference_files/webbpsf-data/"
-
+os.environ["NUMEXPR_MAX_THREADS"] = '32'
 
 #  ----------   Import Libraries  ----------
 
@@ -17,6 +17,7 @@ from astropy.io import fits, ascii
 from astropy.table import Table
 from astropy.visualization import simple_norm, imshow_norm
 from astropy import units as u
+from astropy.time import Time
 import batman
 import h5py
 import numpy as np
@@ -97,7 +98,11 @@ params.t_secondary = 0                # central eclipse time
 params.limb_dark = "quadratic"        # limb darkening model
 params.u = [0.038056000, 0.25594800]  # limb darkening coefficients (ExoFAST)
 nint = 1336
-times = np.linspace(2458651.688213, 2458651.8898130003, nint) # Total = 4.84 hrs. So, 2.42 hrs = 0.1008 days on either side of t0
+times = np.linspace(2458651.68, 2458651.90, nint) # Total = 4.84 hrs. So, 2.42 hrs = 0.1008 days on either side of t0
+time = Time(times, format='jd')
+print(time)
+print(times)
+#timearr = np.array(time)
 m = batman.TransitModel(params, times)
 flux = m.light_curve(params)
 lightcurve_file = os.path.join(output_dir, 'HD-140982_lightcurve.hdf5')
@@ -175,20 +180,23 @@ yam = yaml_generator.SimInput(xml_file, pointing_file, catalogs=catalogs, verbos
 yam.use_linearized_darks = True
 yam.create_inputs()
 
-# ---------- SIMULATE F322W2 GRISMR TSO ---------- 
+"""# ---------- SIMULATE F322W2 GRISMR TSO ---------- 
 
 gr_tso_yaml_file = os.path.join(output_yaml_dir, 'jw01442001001_01101_00002_nrca5.yaml')
 gr_f322w2 = GrismTSO(gr_tso_yaml_file, SED_file=sed_file, SED_normalizing_catalog_column=None,
                     final_SED_file=None, save_dispersed_seed=True, source_stamps_file=None,
                     extrapolate_SED=True, override_dark=None, disp_seed_filename=None,
                     orders=["+1", "+2"])
-gr_f322w2.create()
+gr_f322w2.create()"""
 
 # ---------- SIMULATE WLP8+F210M IMAGING TSO ---------- 
 
-img_tso_sw_A1_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca1.yaml')
+#img_tso_sw_A1_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca1.yaml')
 img_tso_sw_A3_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca3.yaml')
-img_tso_A1 = ImgSim(paramfile=img_tso_sw_A1_yaml)
-img_tso_A1.create()
+#img_tso_sw_ALONG_yaml = os.path.join(output_yaml_dir, 'jw01442001001_01101_00001_nrca5.yaml')
+#img_tso_A1 = ImgSim(paramfile=img_tso_sw_A1_yaml)
+#img_tso_A1.create()
 img_tso_A3 = ImgSim(paramfile=img_tso_sw_A3_yaml)
 img_tso_A3.create()
+#img_tso_ALONG = ImgSim(paramfile=img_tso_sw_ALONG_yaml)
+#img_tso_ALONG.create()

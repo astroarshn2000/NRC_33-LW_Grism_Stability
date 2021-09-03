@@ -1,0 +1,80 @@
+# Observation list created by generate_observationlist.py
+
+Observation001:
+  Name: 'CAR_NIRCam-33'
+  EntryNumber0:
+    Instrument: NIRCAM
+    Date: 2022-3-1T00:00:00
+    PAV3: 0
+    DitherIndex: 0
+    CosmicRayLibrary: SUNMAX
+    CosmicRayScale: 1.0
+    FilterConfig:
+      SW:
+        Filter: None
+        PointSourceCatalog: None
+        GalaxyCatalog: None
+        ExtendedCatalog: None
+        MovingTargetList: None
+        MovingTargetSersic: None
+        MovingTargetExtended: None
+        MovingTargetToTrack: None
+        ImagingTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_imaging_source.cat
+        GrismTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_grism_source.cat
+        BackgroundRate: medium
+        MovingTargetConvolveExtended: True
+        ExtendedScale: 1.0
+        ExtendedCenter: 1024,1024
+      LW:
+        Filter: F335M
+        PointSourceCatalog: None
+        GalaxyCatalog: None
+        ExtendedCatalog: None
+        MovingTargetList: None
+        MovingTargetSersic: None
+        MovingTargetExtended: None
+        MovingTargetToTrack: None
+        ImagingTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_imaging_source.cat
+        GrismTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_grism_source.cat
+        BackgroundRate: medium
+        MovingTargetConvolveExtended: True
+        ExtendedScale: 1.0
+        ExtendedCenter: 1024,1024
+  EntryNumber1:
+    Instrument: NIRCAM
+    Date: 2022-3-1T00:00:00
+    PAV3: 0
+    DitherIndex: 0
+    CosmicRayLibrary: SUNMAX
+    CosmicRayScale: 1.0
+    FilterConfig:
+      SW:
+        Filter: F210M
+        PointSourceCatalog: None
+        GalaxyCatalog: None
+        ExtendedCatalog: None
+        MovingTargetList: None
+        MovingTargetSersic: None
+        MovingTargetExtended: None
+        MovingTargetToTrack: None
+        ImagingTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_imaging_source.cat
+        GrismTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_grism_source.cat
+        BackgroundRate: medium
+        MovingTargetConvolveExtended: True
+        ExtendedScale: 1.0
+        ExtendedCenter: 1024,1024
+      LW:
+        Filter: F322W2
+        PointSourceCatalog: None
+        GalaxyCatalog: None
+        ExtendedCatalog: None
+        MovingTargetList: None
+        MovingTargetSersic: None
+        MovingTargetExtended: None
+        MovingTargetToTrack: None
+        ImagingTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_imaging_source.cat
+        GrismTSOCatalog: /home/anadkarni/NRC_33-LW_Grism_Stability/tso_grism_source.cat
+        BackgroundRate: medium
+        MovingTargetConvolveExtended: True
+        ExtendedScale: 1.0
+        ExtendedCenter: 1024,1024
